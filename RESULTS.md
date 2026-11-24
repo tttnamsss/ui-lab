@@ -44,7 +44,7 @@ the same tool as in step 4|pass|
 - node --version, npm --version and npx cypress version: 
     - node --version: v22.14.0
     - npm --version: 10.9.2
-    - npx cypress version: 16.3.0
+    - npx cypress version: 16.2.1
 - Step 4.3, failure message for the wrong title: 
 - Step 4.6, tool and calories in the answer of POST /api/pizza: 
 - Step 4.7, the line of the admin list that shows your pizza: 
