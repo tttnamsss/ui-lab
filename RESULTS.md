@@ -46,6 +46,17 @@ the same tool as in step 4|pass|
     - npm --version: 10.9.2
     - npx cypress version: 16.2.1
 - Step 4.3, failure message for the wrong title: 
+```
+ 1) Web form
+       fills in the fields and sends the form:
+
+      Timed out retrying after 10000ms
+      + expected - actual
+
+      -'Web form'
+      +'Web Form'
+      
+```
 - Step 4.6, tool and calories in the answer of POST /api/pizza: 
 - Step 4.7, the line of the admin list that shows your pizza: 
 - Step 4.8, run 1, result, duration and pizza name: 
