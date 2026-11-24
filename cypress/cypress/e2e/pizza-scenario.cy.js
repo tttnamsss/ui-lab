@@ -61,9 +61,11 @@ describe('QP-01 A custom pizza reaches the admin list', () => {
                 const calories = Number(text.replace('Calories per slice:', '')) 
                 expect(calories).to.be.at.most(600) 
             }) 
+        cy.screenshot('qp01-step4-recommendation') 
         // Step 5: rate the pizza without logging in 
         cy.get('button[name="rate-5"]').click() 
         cy.get('#rate-result').should('have.text', 'Please log in first.')
+        cy.screenshot('qp01-step5-login-needed') 
         // Step 6: log in on the admin page 
         cy.adminLogin('admin', 'admin') 
         cy.contains('Latest pizza recommendations').should('be.visible')
@@ -71,5 +73,6 @@ describe('QP-01 A custom pizza reaches the admin list', () => {
         cy.get('@tool').then((tool) => { 
             cy.contains('li', pizzaName).should('contain', '(tool=' + tool + ',') 
         })  
+        cy.screenshot('qp01-step7-admin-list') 
     }) 
 }) 

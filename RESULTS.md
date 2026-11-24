@@ -63,8 +63,14 @@ the same tool as in step 4|pass|
 - Step 4.7, the line of the admin list that shows your pizza: Lab Pizza 20261124-215228 (tool=Scissors, ingredients_number=6) (newest)
 
 - Step 4.8, run 1, result, duration and pizza name: 
+    - result: 1 passing
+    - duration: 10 seconds  
+    - pizza name: Lab Pizza 20261124-215939
 - Step 4.8, run 2, result, duration and pizza name: 
-  
+    - result: 1 passing
+    - duration: 10 seconds  
+    - pizza name: Lab Pizza 20261124-220340
+
 ## Part B 
 1. 
 2. 
