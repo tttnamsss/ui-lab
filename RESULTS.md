@@ -60,10 +60,10 @@ the same tool as in step 4|pass|
 - Step 4.6, tool and calories in the answer of POST /api/pizza: 
     - Knife
     - 650
-- Step 4.7, the line of the admin list that shows your pizza: 
+- Step 4.7, the line of the admin list that shows your pizza: Lab Pizza 20261124-215228 (tool=Scissors, ingredients_number=6) (newest)
+
 - Step 4.8, run 1, result, duration and pizza name: 
 - Step 4.8, run 2, result, duration and pizza name: 
-- Step 4.9 (optional), browser and result: 
   
 ## Part B 
 1. 
