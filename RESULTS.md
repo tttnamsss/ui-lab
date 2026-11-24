@@ -13,13 +13,20 @@ Tool parts that I chose:
   
 | Step | Actual result | Pass or fail | 
 |------|---------------|--------------| 
-| 1    |               |              | 
-| 2    |               |              | 
-| 3    |               |              | 
-| 4    |               |              | 
-| 5    |               |              | 
-| 6    |               |              | 
-| 7    |               |              | 
+| 1    |The heading reads Looking to break 
+out of your pizza routine?|pass| 
+| 2    |Max Calories per Slice, Min Number of Toppings, Max Number of Topping, Excluded 
+tools, Must be vegetarian and 
+Custom Pizza Name appear|fail| 
+| 3    |The fields show these values|pass| 
+| 4    |The answer shows the pizza name, dough, ingredients, a 
+tool other than Knife, and 600 or 
+fewer calories per slice |fail| 
+| 5    |The page says Please log in first.|pass| 
+| 6    |The page shows Latest pizza 
+recommendations|pass| 
+| 7    |The line shows the pizza name with 
+the same tool as in step 4|pass| 
   
 ## Part 1: Selenium IDE 
 - Firefox version and Node.js version: 
