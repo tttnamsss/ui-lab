@@ -5,10 +5,10 @@ Tool parts that I chose:
 ## Part 0 
 - Step 0.1, Chrome version: 158.0.8127.37 (รุ่นที่เป็นทางการ) (64 บิต) (cohort: Early Adopters) 
 - Step 0.3, ChromeDriver version: 158.0.8127.36 (14d6f648e8cd7ad750a4044200ce94d3321be260-refs/branch-heads/8127@{#1691})
-- Step 0.4, locator of Pizza, Please!: 
-- Step 0.4, locator of Excluded tools: 
-- Step 0.4, locator of Must be vegetarian: 
-- Step 0.4, locator of Custom Pizza Name: 
+- Step 0.4, locator of Pizza, Please!: $x("//button[normalize-space()='Pizza, Please!']")
+- Step 0.4, locator of Excluded tools: $$("select option").map(o => o.textContent.trim())
+- Step 0.4, locator of Must be vegetarian: $$("#default-checkbox")
+- Step 0.4, locator of Custom Pizza Name: $$("#pizza-name")
 - Step 0.5, pizza name, tool and calories of the run by hand: 
   
 | Step | Actual result | Pass or fail | 
