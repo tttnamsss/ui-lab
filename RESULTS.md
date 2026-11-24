@@ -28,25 +28,9 @@ recommendations|pass|
 | 7    |The line shows the pizza name with 
 the same tool as in step 4|pass| 
   
-## Part 1: Selenium IDE 
-- Firefox version and Node.js version: 
-- Step 1.4, the line of the failed check and the line Tests: 
-- Step 1.5, target chosen for Submit, and why the recorded one was fragile: 
-- Step 1.6, commands changed, added or deleted after recording: 
-- Step 1.6, the pizza names of run 1 and run 2, from the lines info: echo: 
-- Step 1.6, the line Tests: of both runs: 
-- Step 1.7, one line of QP01customerTest.java that needs rewriting, and why: 
-  
-## Part 2: Selenium WebDriver in Java 
-- Step 2.4, the failure line for the wrong title: 
-- Step 2.15, QP01Test run 1, result and time: 
-- Step 2.15, QP01Test run 2, result and time: 
-- Step 2.20, full run 1, time and number of tests: 
-- Step 2.20, full run 2, time and number of tests: 
-  
 ## Part 3: Robot Framework 
-- robot --version: 
-- Step 3.2, failure message for the wrong title: 
+- robot --version: Robot Framework 7.5.1 (Python 3.12.3 on win32) 
+- Step 3.2, failure message for the wrong title: Title should have been 'Web Form' but was 'Web form'.
 - Step 3.8, run 1, result, elapsed time and pizza name: 
 - Step 3.8, run 2, result, elapsed time and pizza name: 
   
