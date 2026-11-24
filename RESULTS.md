@@ -55,9 +55,11 @@ the same tool as in step 4|pass|
 
       -'Web form'
       +'Web Form'
-      
+
 ```
 - Step 4.6, tool and calories in the answer of POST /api/pizza: 
+    - Knife
+    - 650
 - Step 4.7, the line of the admin list that shows your pizza: 
 - Step 4.8, run 1, result, duration and pizza name: 
 - Step 4.8, run 2, result, duration and pizza name: 
