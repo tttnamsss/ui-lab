@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.12.3 on win32)" generated="2026-11-24T19:40:39.658474" rpa="false" schemaversion="5">
+<suite id="s1" name="First" source="C:\Users\Dell\Desktop\Year4\sw validation\ui-lab\robot\first.robot">
+<test id="s1-t1" name="The Web Form Opens" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-24T19:40:40.098423" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/web/web-form.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>service=executable_path=r'%{CHROMEDRIVER}'</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-24T19:40:40.098423" elapsed="1.346731"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-24T19:40:41.633579" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-11-24T19:40:41.633579" level="FAIL">Title should have been 'Web Form' but was 'Web form'.</msg>
+<arg>Web Form</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="FAIL" start="2026-11-24T19:40:41.445846" elapsed="0.192743">Title should have been 'Web Form' but was 'Web form'.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-24T19:40:41.639589" elapsed="2.240917"/>
+</kw>
+<doc>Open the web form and check its title.</doc>
+<status status="FAIL" start="2026-11-24T19:40:40.096423" elapsed="3.785081">Title should have been 'Web Form' but was 'Web form'.</status>
+</test>
+<status status="FAIL" start="2026-11-24T19:40:39.660476" elapsed="4.222027"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="First" id="s1" pass="0" fail="1" skip="0">First</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
