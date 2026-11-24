@@ -72,9 +72,30 @@ the same tool as in step 4|pass|
     - pizza name: Lab Pizza 20261124-220340
 
 ## Part B 
-1. 
-2. 
-3. 
-4. 
-6. 
-7. 
+1. Explain why the tests locate Max Calories per Slice through its label instead of its id. Propose a change to the page that would let a test use an id, and state why that change helps a tester.
+</br><b><u>Answer</u></b>
+The input does not expose a stable id for the test to use, so the test finds it through the visible “Max Calories per Slice” label. The page could give the input an id such as `max-calories-per-slice` and associate the label with it using `for`. A test could then target that stable, unique id directly, without depending on the label text or the input’s position in the DOM.
+
+2. Step 7 of QP-01 compares the tool in the admin list with the tool in the recommendation. Identify the kind of test oracle that this check is, and describe one fault in QuickPizza that it would catch.
+</br><b><u>Answer</u></b>
+This is a consistency (cross-view) oracle: it checks that the same pizza has the same tool in two views. It would catch a fault where QuickPizza recommends one tool but saves or displays a different tool in the admin list.
+
+3. QP-01 never checks that the pizza is vegetarian. Propose a check that would, and state what the test would need from the page or from another source.
+</br><b><u>Answer</u></b>
+After requesting a vegetarian pizza, check that its returned ingredients are all vegetarian. The page or API would need to expose the ingredients, and the test would need a trusted source that classifies them (or the API could return a verified vegetarian flag). Checking only that the vegetarian checkbox was selected would not prove the result is vegetarian.
+
+4. Compare the two tools that you used. Describe how each one waited for QuickPizza, how quickly you could write QP-01 with it, and how readable its report, log or video was.
+</br><b><u>Answer</u></b>
+Robot Framework used SeleniumLibrary's explicit wait keywords, such as waiting for an element or page text, with a 10-second timeout. Cypress automatically retried queries and assertions for up to 10 seconds; I also explicitly waited for the pizza API request with `cy.wait('@pizza')`. I found Cypress quicker to write because its JavaScript commands map directly to the browser actions, while Robot took more setup to define reusable keywords and locators in the resource file. Robot's HTML log is detailed and easy to follow by keyword; Cypress's assertion errors and screenshots/video are useful, though the video is less searchable than a text log.
+
+5. Choose the tool that you would use for the automated UI tests of Project 2, and justify the choice with two reasons from this lab.
+</br><b><u>Answer</u></b>
+I would use Cypress. Its automatic retrying made the UI checks wait for the page without adding many explicit waits, and its network interception let QP-01 verify the pizza response as well as what appeared in the UI. Its screenshots and recorded video also make failures easier to investigate.
+
+6.  For Part 3, explain where you would change the locator of the calories box if QuickPizza changed it, and how the resource file keeps that change out of the test file.
+</br><b><u>Answer</u></b>
+I would update the `${MAX CALORIES}` locator variable in `robot/resources/quickpizza.resource`. The test case calls keywords from that resource rather than containing the locator itself, so changing the variable updates the shared keyword behavior without editing `pizza_scenario.robot`.
+
+7.  For Part 4, explain why QP-01 has to be a single test in Cypress, which clears the cookies before each test, and what would go wrong if steps 6 and 7 were a second test.
+</br><b><u>Answer</u></b>
+Cypress clears cookies before each test to isolate tests. QP-01 therefore keeps the admin login (step 6) and checking the admin list (step 7) in the same test. If step 7 were a second test, the login cookie from step 6 would be cleared before it ran, so the admin page could require logging in again or deny access to the list.
